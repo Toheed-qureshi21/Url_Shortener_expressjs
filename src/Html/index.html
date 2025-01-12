@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Url Shortener App</h1>
+        <form id="form-container" action="/" method="post">
+            <div>
+                <label for="url">Enter the Url</label>
+                <input type="text" name="url" id="url" />
+            </div>
+            <div>
+                <label for="short-url">Enter the short url</label>
+                <input type="text" name="short_url" id="short-url" />
+            </div>
+            <button type="submit">Short</button>
+        </form>
+        <h2>Shorten url</h2>
+        <ul id="shortened_url">{{shorten-urls}}</ul>
+    </div>
+</body>
+
+</html>
