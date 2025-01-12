@@ -34,7 +34,6 @@ app.get("/",async(req,res)=>{
         const content = file.toString().replaceAll("{{shorten-urls}}",Object.entries(links).map(([shortUrl,url])=>{
          return   `<li><a href="/${shortUrl}">${req.hostname}/${shortUrl}</a><br>--->${url}</li>`
         }).join(""))
-        // res.sendFile(path.join(import.meta.dirname,"Html","index.html"))
         res.send(content)
     } catch (error) {
         console.log(error);
